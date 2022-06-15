@@ -72,6 +72,7 @@ class App extends Component {
 | foregroundColor | string        | rgb(0, 0, 0)       | Foreground color of the audio wave / canvas          |
 | canvasWidth     | number,string | 500                | Canvas width (you can use css to make it responsive) |
 | canvasHeight    | number,string | 300                | canvas height                                        |
+| deviceId        | string        | default            | the device id of the audio input device              |
 
 ## License
 
