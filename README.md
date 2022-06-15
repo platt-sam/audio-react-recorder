@@ -85,3 +85,8 @@ MIT © [noobieprogrammer](https://github.com/noobieprogrammer)
 - [My Blog](https://noobieprogrammer.blogspot.com/)
 - [Twitter](https://twitter.com/noobieprogrmmer)
 - [Youtube](https://www.youtube.com/channel/UCpzMkMzGopmft5welUr8QZg)
+
+## Modifications on this fork by
+### Liam Erickson @ericksonl
+### Sam Platt @platt-sam
+### Joshua Yoon @GeneralNotSteve
