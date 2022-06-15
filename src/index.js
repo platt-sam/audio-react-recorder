@@ -1,3 +1,7 @@
+/*
+ * This is a modification of the original audio-react-recorder source code
+ * modifications by @ericksonl, @platt-sam, and @GeneralNotSteve
+ */
 import React from 'react'
 import styles from './styles.module.css'
 import PropTypes from 'prop-types' // ES6
@@ -29,6 +33,7 @@ export default class AudioReactRecorder extends React.Component {
     foregroundColor: PropTypes.string,
     canvasWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     canvasHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    device_id: PropTypes.string,
 
     //method calls
     onStop: PropTypes.func
@@ -39,7 +44,8 @@ export default class AudioReactRecorder extends React.Component {
     backgroundColor: 'rgb(200, 200, 200)',
     foregroundColor: 'rgb(0, 0, 0)',
     canvasWidth: 500,
-    canvasHeight: 300
+    canvasHeight: 300,
+    device_id: "default" // added property to be used as a deviceId constraint later
   }
 
   //2 - mount
@@ -108,9 +114,8 @@ export default class AudioReactRecorder extends React.Component {
   //get mic stream
   getStream = (constraints) => {
     if (!constraints) {
-      constraints = { audio: true, video: false }
+      constraints = { audio: {deviceId: "default"}, video: false, }
     }
-
     return navigator.mediaDevices.getUserMedia(constraints)
   }
 
@@ -260,9 +265,11 @@ export default class AudioReactRecorder extends React.Component {
   }
 
   setupMic = async () => {
+    var constraints = {audio: {deviceId: this.props.device_id}, video: false};
+    console.log("Constraints for this AudioReactRecorder: ", constraints, "\n", this.props.device_id);
     //TODO: only get stream after clicking start
     try {
-      window.stream = this.stream = await this.getStream()
+      window.stream = this.stream = await this.getStream(constraints)
       //TODO: on got stream
     } catch (err) {
       //TODO: error getting stream
