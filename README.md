@@ -88,8 +88,8 @@ MIT © [noobieprogrammer](https://github.com/noobieprogrammer)
 
 ## Modifications on this fork by
 ### Liam Erickson
-[[@ericksonl](https://github.com/ericksonl)]
+[@ericksonl](https://github.com/ericksonl)
 ### Sam Platt
-[[@platt-sam](https://github.com/platt-sam)]
+[@platt-sam](https://github.com/platt-sam)
 ### Joshua Yoon
-[[@GeneralNotSteve](https://github.com/GeneralNotSteve)]
+[@GeneralNotSteve](https://github.com/GeneralNotSteve)
